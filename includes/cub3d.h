@@ -6,7 +6,7 @@
 /*   By: gpaupher <gpaupher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:42:33 by gpaupher          #+#    #+#             */
-/*   Updated: 2025/01/20 17:30:00 by gpaupher         ###   ########.fr       */
+/*   Updated: 2025/01/27 18:01:32 by gpaupher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@
 # define ERR_MALLOC	"cub3d error: Malloc function"
 
 # define ERR_ARG	"cub3d error: Invalid number of arguments"
+# define ERR_FILE	"cub3d error: Invalid file"
 # define ERR_MAP	"cub3d error: Invalid map"
 # define ERR_IMG	"cub3d error: texture not correctly loaded"
 
