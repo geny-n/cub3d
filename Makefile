@@ -6,7 +6,7 @@
 #    By: gpaupher <gpaupher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 15:21:03 by ngeny             #+#    #+#              #
-#    Updated: 2025/01/27 18:00:38 by gpaupher         ###   ########.fr        #
+#    Updated: 2025/01/27 18:30:02 by gpaupher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -57,7 +57,7 @@ all: ${LIBFT} ${MLX} ${NAME}
 ${LIBFT} :
 	@make -sC ./libft
 ${MLX} :
-	@make -sC minilibx-linux
+	@make -sC ./minilibx-linux
 
 ${NAME} : ${OBJ}
 	${CC} ${FLAGS} ${INCLUDES} ${OBJ} ${LIBFT}  ${MINILIBX} -o ${NAME}
