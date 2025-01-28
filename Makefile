@@ -6,7 +6,7 @@
 #    By: ngeny <ngeny@student.42.fr>                +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 15:21:03 by ngeny             #+#    #+#              #
-#    Updated: 2025/01/27 18:21:20 by ngeny            ###   ########.fr        #
+#    Updated: 2025/01/28 13:54:29 by ngeny            ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -38,7 +38,9 @@ INC_CUB = includes/
 #------SOURCES------#
 
 SRC = src/
-MAINSRC = ${SRC}main.c
+MAINSRC = 	${SRC}main.c \
+			${SRC}init.c \
+			
 SOURCES = ${MAINSRC}
 
 #-------BONUS-------#

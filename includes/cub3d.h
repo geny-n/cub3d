@@ -6,7 +6,7 @@
 /*   By: ngeny <ngeny@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/01/20 16:42:33 by gpaupher          #+#    #+#             */
-/*   Updated: 2025/01/27 18:25:29 by ngeny            ###   ########.fr       */
+/*   Updated: 2025/01/28 14:08:00 by ngeny            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,8 +47,15 @@ typedef struct s_item
 
 typedef struct s_data
 {
-	void	*mlx;
-	void	*win;
+	void	*imge;
+	char	*addr;
+	int		bits_per_pixel;
+	int		line_length;
+	int		endian;
+
+	
+	void	*mlx_ptr;
+	void	*mlx_win;
 	char	**file;
 	char	**map;
 
@@ -56,4 +63,8 @@ typedef struct s_data
 	t_img	img;
 }	t_data;
 
+/********INIT*******/
+int	init_data(t_data *data);
+
+/*****************/
 #endif
