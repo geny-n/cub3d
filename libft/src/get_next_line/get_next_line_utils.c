@@ -6,7 +6,7 @@
 /*   By: gpaupher <gpaupher@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/12/06 15:05:37 by gpaupher          #+#    #+#             */
-/*   Updated: 2024/04/04 16:50:26 by gpaupher         ###   ########.fr       */
+/*   Updated: 2025/01/28 13:42:00 by gpaupher         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ char	*ft_strjoin_gnl(char *left_str, char *buff)
 		return (NULL);
 	str = malloc(sizeof(char) * ((ft_strlen(left_str) + ft_strlen(buff)) + 1));
 	if (str == NULL)
-		return (NULL);
+		return (free(left_str), NULL);
 	i = -1;
 	j = 0;
 	if (left_str)

@@ -5,8 +5,8 @@ it can be a gap between 2 walls
 
 11111111111
 10000000001
-111000000001
-100000 00001 <- space here, but still valid (just need to take care of this kind of case)
+11000000001
+100    00001 <- space here, but still valid (just need to take care of this kind of case)
 100000000011	(either you replace it by a 0 or by a 1)
 100011100001
 11111 111111  <- gap here but the map is still valid 

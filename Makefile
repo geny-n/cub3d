@@ -6,7 +6,7 @@
 #    By: gpaupher <gpaupher@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2024/04/16 15:21:03 by ngeny             #+#    #+#              #
-#    Updated: 2025/01/27 18:30:02 by gpaupher         ###   ########.fr        #
+#    Updated: 2025/01/28 16:16:05 by gpaupher         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -25,18 +25,20 @@ MLX_PATH = minilibx-linux/
 MLX = minilibx-linux/libmlx_Linux.a
 MLXFLAG = -lX11 -lXext
 MINILIBX = ${MLX} ${MLXFLAG}
+INC_MLX = minilibx-linux/
+INCLUDES = -I./${INC_MLX}
 
 #------INCLUDES------#
 
 INC_LIBFT = libft/includes/
 INC_CUB = includes/
-INC_MLX = minilibx-linux/
-INCLUDES = -I./${INC_CUB} -I./${INC_LIBFT} -I./${INC_MLX}
+#INC_MLX = minilibx-linux/
+#INCLUDES = -I./${INC_CUB} -I./${INC_LIBFT} -I./${INC_MLX}
 
 #------SOURCES------#
 
 SRC = src/
-MAINSRC = ${SRC}main.c
+MAINSRC = ${SRC}main.c ${SRC}read_file.c
 SOURCES = ${MAINSRC}
 
 #-------BONUS-------#
@@ -57,7 +59,7 @@ all: ${LIBFT} ${MLX} ${NAME}
 ${LIBFT} :
 	@make -sC ./libft
 ${MLX} :
-	@make -sC ./minilibx-linux
+	@make -sC minilibx-linux
 
 ${NAME} : ${OBJ}
 	${CC} ${FLAGS} ${INCLUDES} ${OBJ} ${LIBFT}  ${MINILIBX} -o ${NAME}
